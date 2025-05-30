@@ -24,5 +24,8 @@ If a player leaves midway through a match, they are able to rejoin as long as th
 
 ## Bugs and todo:
 Publicly shame players for leaving the cage using a title command<br/>
-Detect if players' scoreboards are correct? Sometimes people have the wrong death counter and it leads to issues
+Give the escaper a way to deal damage to trappers sitting in the same block as them<br>
+Does a crossbow work better?<br>
+Give knockback onto the fishing rod, actually <br>
+Fix the helmet to prevent 1-creeper
 
