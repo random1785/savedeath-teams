@@ -22,6 +22,7 @@ execute unless score @e[type=minecraft:armor_stand,limit=1,tag=score] right matc
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] right matches 2 run execute as @r[scores={health=1..}] run title @a title [{"color":"gold","text":"Team "},{"score":{"name":"@s","objective":"team"}},{"text":" is the winner!"}]
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] right matches 2 run execute as @a[scores={health=1..}] run tellraw @a [{"color":"gold","selector":"@s"},{"text":" is a winner!"}]
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] right matches 2 run execute at @a run playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 0.5
+execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] right matches 2 run schedule function a:zzzfinal 3s
 execute if score @e[type=minecraft:armor_stand,limit=1,tag=score] right matches 2 run tag @s remove newcheck
 execute as @a run scoreboard players operation @s temp = @s health
 scoreboard objectives remove health

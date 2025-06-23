@@ -1,5 +1,5 @@
-execute as @a[team=a,scores={calc=69420}] run scoreboard players set @a[team=a] calc 69420
-execute as @a[team=b,scores={calc=69420}] run scoreboard players set @a[team=b] calc 69420
+execute as @a[team=a,scores={calc=2785}] run scoreboard players set @a[team=a] calc 2785
+execute as @a[team=b,scores={calc=2785}] run scoreboard players set @a[team=b] calc 2785
 scoreboard players reset @e[type=minecraft:armor_stand,limit=1] score
 scoreboard players set @e[type=minecraft:armor_stand,limit=1] round 0
 tellraw @a {"text":"Round is over! Calculating results:","color":"red","bold":true}

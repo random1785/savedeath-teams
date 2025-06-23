@@ -5,6 +5,7 @@ schedule clear a:zzzhealthcalc1
 schedule clear a:zzzhealthcalc2
 schedule clear a:zzzhealthcalc3
 schedule clear a:zzzhealthcalc2
+schedule clear a:zzzfiveschecker
 schedule clear a:victory
 schedule clear a:victory2
 scoreboard players reset @e

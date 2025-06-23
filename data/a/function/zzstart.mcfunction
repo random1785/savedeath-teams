@@ -1,6 +1,6 @@
 gamerule doImmediateRespawn true
 scoreboard players set @a death 1785
-time set 10000
+time set 8000
 clear @a
 effect clear @a
 kill @a
@@ -23,7 +23,9 @@ schedule function a:zzzstart0 20t
 schedule function a:zzzstart00 2t
 gamemode survival @a
 scoreboard players set @a health 200
+scoreboard players set @a[scores={team=-1785}] health -1785
 scoreboard players set @a temp 200
+scoreboard players set @a[scores={team=-1785}] temp -1785
 scoreboard players reset @a gone
 
 # disables team trigger

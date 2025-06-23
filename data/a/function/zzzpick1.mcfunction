@@ -8,11 +8,6 @@ effect give @a[scores={health=1..500},tag=!die] night_vision infinite 1 true
 # say whos the deather
 execute as @a[tag=die,scores={health=1..500,team=1}] run tellraw @a [{"bold":true,"color":"aqua","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 1!"}]
 execute as @a[tag=die,scores={health=1..500,team=2}] run tellraw @a [{"bold":true,"color":"green","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 2!"}]
-execute as @a[tag=die,scores={health=1..500,team=3}] run tellraw @a [{"bold":true,"color":"gold","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 3!"}]
-execute as @a[tag=die,scores={health=1..500,team=4}] run tellraw @a [{"bold":true,"color":"light_purple","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 4!"}]
-execute as @a[tag=die,scores={health=1..500,team=5}] run tellraw @a [{"bold":true,"color":"blue","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 5!"}]
-execute as @a[tag=die,scores={health=1..500,team=6}] run tellraw @a [{"bold":true,"color":"red","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 6!"}]
-execute as @a[tag=die,scores={health=1..500,team=7}] run tellraw @a [{"bold":true,"color":"yellow","selector":"@s"},{"bold":false,"text":" is going to be dying for Team 7!"}]
 
 
 # set calc to smthn
