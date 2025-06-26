@@ -8,6 +8,7 @@ scoreboard players set @e[type=armor_stand,tag=score] round 0
 scoreboard players set @e[type=armor_stand,tag=score] multi 100
 scoreboard players set @e[type=armor_stand,tag=score] two 2
 scoreboard players set @e[type=armor_stand,tag=score] five 5
+scoreboard players set @e[type=armor_stand,tag=score] first 0
 tag @e[type=armor_stand,tag=score] add newcheck
 tag @a remove a
 tag @a remove b

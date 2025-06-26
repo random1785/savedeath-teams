@@ -18,26 +18,6 @@ execute as @a[scores={t2=1..}] run scoreboard players set @s team 2
 execute as @a[scores={t2=1..}] run team join b @s
 execute as @a[scores={t2=1..}] run scoreboard players reset @s t2
 
-execute as @a[scores={t3=1..}] run tellraw @a [{"color":"gold","selector":"@s"},{"text":" has joined team 3!"}]
-execute as @a[scores={t3=1..}] run scoreboard players set @s team 3
-execute as @a[scores={t3=1..}] run scoreboard players reset @s t3
-
-execute as @a[scores={t4=1..}] run tellraw @a [{"color":"light_purple","selector":"@s"},{"text":" has joined team 4!"}]
-execute as @a[scores={t4=1..}] run scoreboard players set @s team 4
-execute as @a[scores={t4=1..}] run scoreboard players reset @s t4
-
-execute as @a[scores={t5=1..}] run tellraw @a [{"color":"blue","selector":"@s"},{"text":" has joined team 5!"}]
-execute as @a[scores={t5=1..}] run scoreboard players set @s team 5
-execute as @a[scores={t5=1..}] run scoreboard players reset @s t5
-
-execute as @a[scores={t6=1..}] run tellraw @a [{"color":"red","selector":"@s"},{"text":" has joined team 6!"}]
-execute as @a[scores={t6=1..}] run scoreboard players set @s team 6
-execute as @a[scores={t6=1..}] run scoreboard players reset @s t6
-
-execute as @a[scores={t7=1..}] run tellraw @a [{"color":"yellow","selector":"@s"},{"text":" has joined team 7!"}]
-execute as @a[scores={t7=1..}] run scoreboard players set @s team 7
-execute as @a[scores={t7=1..}] run scoreboard players reset @s t7
-
 
 effect give @a[tag=die] glowing 1 0 true
 
@@ -48,9 +28,9 @@ execute unless entity @e[limit=1,tag=score,scores={round=1}] positioned 12.79 30
 execute unless entity @e[limit=1,tag=score,scores={round=1}] positioned 12.79 308.35 0.70 run scoreboard players enable @a[distance=..30] t1
 execute unless entity @e[limit=1,tag=score,scores={round=1}] positioned 12.79 308.35 0.70 run scoreboard players enable @a[distance=..30] spec
 
-execute in minecraft:the_nether positioned 11.08 129.00 4.82 run scoreboard players enable @a[distance=..30] t1
-execute in minecraft:the_nether positioned 11.08 129.00 4.82 run scoreboard players enable @a[distance=..30] t2
-execute in minecraft:the_nether positioned 11.08 129.00 4.82 run scoreboard players enable @a[distance=..30] spec
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run scoreboard players enable @a[distance=..60] t1
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run scoreboard players enable @a[distance=..60] t2
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run scoreboard players enable @a[distance=..60] spec
 
 
 effect give @a[scores={death=18..}] resistance 1 255 true
@@ -59,9 +39,11 @@ effect give @a[scores={death=18..}] mining_fatigue 1 254 true
 execute positioned 12.79 308.35 0.70 run effect give @a[distance=..30] mining_fatigue 1 254 true
 execute positioned 12.79 308.35 0.70 run effect give @a[distance=..30] resistance 1 254 true
 execute positioned 22.41 309.99 0.39 run effect give @a[distance=..10] saturation 1 254 true
-execute in minecraft:the_nether positioned 11.08 129.00 4.82 run effect give @a[distance=..20] resistance 1 254 true
-execute in minecraft:the_nether positioned 11.08 129.00 4.82 run effect give @a[distance=..20] mining_fatigue 1 254 true
-execute in minecraft:the_nether positioned 11.08 129.00 4.82 run effect give @a[distance=..20] saturation 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run effect give @a[distance=..60] resistance 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run effect give @a[distance=..60] mining_fatigue 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run effect give @a[distance=..60] saturation 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tp @e[type=enderman,distance=..60,tag=!end] ~ 0 ~
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tag @e[type=enderman,distance=..60,tag=!end] add end
 # effect give @a[x=-10,y=290,z=-10,dx=20,dy=20,dz=20] resistance 1 254 true
 scoreboard players add @e[type=armor_stand,tag=score,scores={round=1..}] score 1
 execute as @e[tag=score,type=armor_stand,scores={score=0..10}] at @a run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace glass
@@ -158,7 +140,7 @@ execute as @e[type=minecraft:armor_stand,tag=score,scores={score=-240..-1}] at @
 execute as @e[type=minecraft:armor_stand,tag=score,scores={score=10..60000,overkill=1..}] if score @s overkill <= @s score run gamemode spectator @a[scores={death=17,health=1..500}]
 execute as @e[type=minecraft:armor_stand,tag=score,scores={score=10..60000,overkill=1..}] if score @s overkill <= @s score run scoreboard players set @s limit 69420
 execute as @e[type=minecraft:armor_stand,tag=score,scores={score=10..60000,overkill=1..}] if score @s overkill <= @s score run scoreboard players set @a[tag=die,scores={death=17,health=1..500}] calc 2785
-execute unless score @e[limit=1,type=armor_stand,tag=score] first matches 0.. run scoreboard players set @s first 2785
+execute unless score @e[limit=1,type=armor_stand,tag=score] first matches 0.. run scoreboard players set @e[limit=1,type=armor_stand,tag=score] first 2785
 execute as @e[type=minecraft:armor_stand,tag=score,scores={score=10..60000,overkill=1..}] if score @s overkill <= @s score run tellraw @a {"bold":true,"text":"Round limit reached!","color":"dark_red"}
 execute as @e[type=minecraft:armor_stand,tag=score,scores={score=10..60000,overkill=1..}] if score @s overkill <= @s score run tellraw @a {"text":"Teams who have not managed to die have recieved a raw score of 2785.","color":"dark_red"}
 execute as @e[type=minecraft:armor_stand,tag=score,scores={score=10..60000,overkill=1..}] if score @s overkill <= @s score run execute as @a at @s run playsound minecraft:block.anvil.land player @a

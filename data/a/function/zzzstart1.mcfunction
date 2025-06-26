@@ -15,3 +15,13 @@ tag @a remove a
 tag @a remove b
 tag @a remove c
 tag @a remove die
+
+# disables team trigger
+execute as @a run trigger t1 add 0
+execute as @a run trigger t2 add 0
+execute as @a run trigger t3 add 0
+execute as @a run trigger t4 add 0
+execute as @a run trigger t5 add 0
+execute as @a run trigger t7 add 0
+execute as @a run trigger t6 add 0
+execute as @a run trigger spec add 0

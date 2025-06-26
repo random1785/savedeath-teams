@@ -14,5 +14,5 @@ give @a[scores={health=1..500},tag=!die] water_bucket 16
 give @a[scores={health=1..500},tag=!die] tipped_arrow[minecraft:potion_contents={potion:"strong_healing"}] 8
 
 execute as @a[tag=die,scores={health=1..500,team=1..2}] run item replace entity @s armor.head with turtle_helmet[minecraft:enchantments={blast_protection:10,binding_curse:1},minecraft:unbreakable={true:1}]
-execute as @a[scores={health=1..500},tag=!die,team=1] run give @a[tag=die,scores={health=1..500,team=2}] warped_fungus_on_a_stick 1
-execute as @a[scores={health=1..500},tag=!die,team=2] run give @a[tag=die,scores={health=1..500,team=1}] warped_fungus_on_a_stick 1
+execute as @a[scores={health=1..500,team=1},tag=!die] run give @a[tag=die,scores={health=1..500,team=2}] warped_fungus_on_a_stick 1
+execute as @a[scores={health=1..500,team=2},tag=!die] run give @a[tag=die,scores={health=1..500,team=1}] warped_fungus_on_a_stick 1
