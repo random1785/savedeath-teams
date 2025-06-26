@@ -1,0 +1,2 @@
+execute as @a at @s run playsound minecraft:entity.ghast.hurt master @s ~ ~ ~ 0.5
+tellraw @a {"color":"dark_red","text":"Not all players are on a team! Please run /reload and make all players select their teams."}

@@ -1,0 +1,1 @@
+kill @r[gamemode=survival]

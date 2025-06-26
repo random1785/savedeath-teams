@@ -1,0 +1,1 @@
+tellraw @a {"color":"light_purple","text":"Thanks for playing Savedeath Teams! To start another game, first run /reload and run /function a:start again!"}

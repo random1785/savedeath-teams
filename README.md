@@ -23,5 +23,9 @@ If a player joins midway through a match, they are instantly eliminated and put 
 If a player leaves midway through a match, they are able to rejoin as long as the health calculation has not started (nobody is alive and playing)
 
 ## Bugs and todo:
-no idea therse probably a few of those lying around
+Publicly shame players for leaving the cage using a title command<br/>
+Give the escaper a way to deal damage to trappers sitting in the same block as them<br>
+Does a crossbow work better?<br>
+Give knockback onto the fishing rod, actually <br>
+Fix the helmet to prevent 1-creeper
 
